@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Label alignment="CENTER" cacheShape="false" contentDisplay="CENTER" layoutX="260.0" layoutY="20.0" text="List View" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" cacheShape="false" layoutX="60.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="item" alignment="CENTER" cacheShape="false" contentDisplay="CENTER" layoutX="341.0" layoutY="100.0" prefHeight="50.0" prefWidth="200.0" text="선택한 아이템" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="input" cacheShape="false" layoutX="341.0" layoutY="160.0" onAction="#input" prefHeight="40.0" prefWidth="200.0" />
+      <Button fx:id="add" cacheShape="false" layoutX="341.0" layoutY="210.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="200.0" text="추가" />
+      <Button fx:id="delete" cacheShape="false" layoutX="341.0" layoutY="260.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="200.0" text="삭제" />
+   </children>
+</AnchorPane>
