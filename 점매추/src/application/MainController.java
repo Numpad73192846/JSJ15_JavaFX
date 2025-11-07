@@ -101,6 +101,7 @@ public class MainController {
     	menu.setText(menuName);
     	// 메뉴 이미지 지정
     	String filePath = getClass().getResource("/img/" + menuImg).toExternalForm();
+    		
     	img.setImage( new Image(filePath) );
     }
     
