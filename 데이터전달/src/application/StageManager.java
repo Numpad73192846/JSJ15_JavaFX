@@ -54,6 +54,33 @@ public class StageManager {
 	
 	/**
 	 * 화면 이동
+	 * -FXML 파일을 로드하여 root 컨테이너 교체
+	 * @param fxml
+	 */
+	public static void show(String fxml, Object data) {
+		try {
+			FXMLLoader loader = new FXMLLoader(StageManager.class.getResource("/application/" + fxml + ".fxml"));
+			Parent root = loader.load();
+			Object controller = loader.getController();
+			controllers.put(fxml, controller);
+			
+			// 데이터 전달 인터페이스 구현한 경우, 데이터 전달
+			if( controller instanceof DataReceiver receiver) {
+				receiver.receiveData(data);
+			}
+			
+			scene.setRoot(root);
+			stage.sizeToScene();
+			stage.show();
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+			System.err.println("FXML 로드 실패 - 화면 이동 실패");
+		}
+	}
+	
+	/**
+	 * 화면 이동
 	 * - 새로운 Scene로 정환하여 화면 이동
 	 * @param fxml
 	 */

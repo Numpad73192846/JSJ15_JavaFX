@@ -1,8 +1,6 @@
 package application;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -72,7 +70,8 @@ public class MainController {
     /**
      * 방향키 키 입력 이벤트
      */
-    void keyEvent() {
+    @SuppressWarnings("incomplete-switch")
+	void keyEvent() {
     	Scene scene = Main.scene;
     	if( scene != null ) {
     		// 키입력 이벤트 등록

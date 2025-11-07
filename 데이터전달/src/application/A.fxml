@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AController">
    <children>
       <TextField fx:id="input" layoutX="194.0" layoutY="158.0" prefHeight="55.0" prefWidth="214.0" promptText="입력해보세요." />
-      <Button layoutX="217.0" layoutY="247.0" mnemonicParsing="false" onAction="#to" prefHeight="40.0" prefWidth="166.0" text="전달하기">
+      <Button layoutX="217.0" layoutY="247.0" mnemonicParsing="false" onAction="#to" prefHeight="40.0" prefWidth="166.0" text="B로 전달하기">
          <font>
             <Font size="20.0" />
          </font>
@@ -19,5 +19,10 @@
             <Font size="20.0" />
          </font>
       </Label>
+      <Button layoutX="217.0" layoutY="304.0" mnemonicParsing="false" onAction="#toC" prefHeight="40.0" prefWidth="166.0" text="C로 전달하기">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
